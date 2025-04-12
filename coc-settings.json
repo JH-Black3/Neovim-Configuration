@@ -1,0 +1,8 @@
+{
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.directories": [
+	  "/home/jh/.config/nvim/Ultisnips",
+    "UltiSnips"
+  ],
+  "coc.source.word.filetypes": ["markdown", "text"]
+}
