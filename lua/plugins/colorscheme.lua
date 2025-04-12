@@ -11,13 +11,14 @@ return {
   },
   {
   "folke/tokyonight.nvim",
-	  lazy = true,
+	  lazy = false,
 	  priority = 1000,
 	  opts = function()
 		  return {
-			  transparent = true,
+			  -- transparent = true,
 		  }
 	  end,
 	},
+	{ "EdenEast/nightfox.nvim" },
 }
 

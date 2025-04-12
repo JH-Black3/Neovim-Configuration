@@ -1,6 +1,6 @@
 return{
-{
-  "nvim-neo-tree/neo-tree.nvim",
+	{
+	"nvim-neo-tree/neo-tree.nvim",
     keys = {
       -- { "<leader>ft", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
       { "<C-n>", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
@@ -8,9 +8,7 @@ return{
     config = function()
       require("neo-tree").setup()
     end,
-},
-	{ 'jiangmiao/auto-pairs' },
-	{'preservim/tagbar'},
+	},
 	{
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -26,5 +24,12 @@ return{
     init = function()
       if vim.fn.executable "npx" then vim.g.mkdp_filetypes = { "markdown" } end
     end,
-},
+	},
+	{'jiangmiao/auto-pairs'},
+	{'preservim/tagbar'},
+	{'lewis6991/gitsigns.nvim'},
+	{'SirVer/ultisnips'},
+	{'neoclide/coc.nvim',
+	branch = "release",
+    build = "npm install --frozen-lockfile", },
 }

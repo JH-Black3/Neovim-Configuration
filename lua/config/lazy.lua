@@ -24,11 +24,12 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-	  'lfv89/vim-interestingwords',
-	  'folke/which-key.nvim',
-	  "nvim-treesitter/nvim-treesitter-context",
-	  'scrooloose/nerdcommenter',
-	  'lervag/vimtex',
+		'lfv89/vim-interestingwords',
+		'folke/which-key.nvim',
+		'nvim-treesitter/nvim-treesitter-context',
+		'scrooloose/nerdcommenter',
+		'lervag/vimtex',
+		'hrsh7th/nvim-cmp',
 
 	  {import = "plugins"},
     -- add your plugins here
