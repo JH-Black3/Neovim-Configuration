@@ -23,7 +23,7 @@ vim.keymap.set('n', '<leader>sk', '<cmd>set nosplitbelow<CR>:split<CR>')
 -- Check spell
 vim.keymap.set('n', '<leader>qc', '<cmd>set spell<CR>', {desc = "Check Spell"})
 
-vim.api.nvim_set_keymap('i', '<TAB>', 'coc#pum#visible() ? coc#pum#next(1) : v:lua.CheckBackspace() ? "<TAB>" : coc#refresh()', {expr = true, silent = true, noremap = true})
+-- vim.api.nvim_set_keymap('i', '<TAB>', 'coc#pum#visible() ? coc#pum#next(1) : v:lua.CheckBackspace() ? "<TAB>" : coc#refresh()', {expr = true, silent = true, noremap = true})
 vim.api.nvim_set_keymap('i', '<S-TAB>', 'coc#pum#visible() ? coc#pum#prev(1) : "<C-h>"', {expr = true, silent = true, noremap = true})
 
 function _G.CheckBackspace()
@@ -31,4 +31,4 @@ function _G.CheckBackspace()
   return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
-vim.api.nvim_set_keymap('i', '<CR>', 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', {expr = true, silent = true, noremap = true})
+vim.api.nvim_set_keymap('i', '<TAB>', 'coc#pum#visible() ? coc#pum#confirm() : "<TAB>"', {expr = true, silent = true, noremap = true})
